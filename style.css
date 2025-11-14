@@ -232,7 +232,7 @@
     .line1 i {
      font-size: 1.8rem;
       height: 30px;
-    margin-bottom: 100px;
+   
     color: #405DE6;
     }
 
@@ -241,20 +241,20 @@
       height: 30px;
       margin-right: 100px;
       color: #128C7E;
-      margin-bottom: 100px;
+    
     }
  .line3 i{
      font-size: 1.8rem;
       height: 30px;
      margin-right: 150px;
-      margin-bottom: 100px;
+      
       color: #1877f2;
  }
 
   .line4 i {
       font-size: 1.8rem;
         height: 30px;
-        margin-bottom: 100px;
+       
         color: #000000;
         margin-right: 100px;
   }
@@ -394,4 +394,5 @@
     top: 10px;
     right: 20px;
     cursor: pointer;
+
 }
