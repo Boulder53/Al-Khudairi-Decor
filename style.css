@@ -239,7 +239,7 @@
     .line2 i {
      font-size: 1.8rem;
       height: 30px;
-      margin-right: 100px;
+      margin-right: 50px;
       color: #128C7E;
     
     }
@@ -256,7 +256,7 @@
         height: 30px;
        
         color: #000000;
-        margin-right: 100px;
+        margin-right: 50px;
   }
 
   .line1 i:hover {
@@ -396,4 +396,5 @@
     cursor: pointer;
 
 }
+
 
