@@ -229,34 +229,34 @@
 
     }
 
-    .line1 i {
+     .line1 i {
      font-size: 1.8rem;
       height: 30px;
-   
+    margin-bottom: 100px;
     color: #405DE6;
     }
 
     .line2 i {
      font-size: 1.8rem;
       height: 30px;
-      margin-right: 50px;
+      
       color: #128C7E;
-    
+      margin-bottom: 100px;
     }
  .line3 i{
      font-size: 1.8rem;
       height: 30px;
-     margin-right: 50px;
-      
+     
+      margin-bottom: 100px;
       color: #1877f2;
  }
 
   .line4 i {
       font-size: 1.8rem;
         height: 30px;
-       
+        margin-bottom: 100px;
         color: #000000;
-        margin-right: 50px;
+        
   }
 
   .line1 i:hover {
@@ -396,5 +396,6 @@
     cursor: pointer;
 
 }
+
 
 
