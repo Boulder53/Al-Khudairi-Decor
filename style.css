@@ -119,8 +119,8 @@
     }
 
     .project-section img {
-      width: 320px;
-      height: 240px;
+      width: 310px;
+      height: 230px;
       object-fit: cover;
       border-radius: 10px;
       margin: 12px;
@@ -396,6 +396,7 @@
     cursor: pointer;
 
 }
+
 
 
 
