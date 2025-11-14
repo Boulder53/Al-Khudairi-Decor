@@ -119,8 +119,8 @@
     }
 
     .project-section img {
-      width: 310px;
-      height: 230px;
+      width: 300px;
+      height: 220px;
       object-fit: cover;
       border-radius: 10px;
       margin: 12px;
@@ -129,7 +129,7 @@
       opacity: 0;
       transform: translateY(30px);
       animation: fadeIn 1s forwards;
-       padding-left: 10px;
+       
     }
 
     .project-section img:hover {
@@ -397,6 +397,7 @@
     cursor: pointer;
 
 }
+
 
 
 
