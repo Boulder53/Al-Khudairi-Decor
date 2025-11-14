@@ -246,7 +246,7 @@
  .line3 i{
      font-size: 1.8rem;
       height: 30px;
-     margin-right: 150px;
+     margin-right: 50px;
       
       color: #1877f2;
  }
@@ -396,3 +396,4 @@
     cursor: pointer;
 
 }
+
