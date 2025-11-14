@@ -129,6 +129,7 @@
       opacity: 0;
       transform: translateY(30px);
       animation: fadeIn 1s forwards;
+       padding-left: 10px;
     }
 
     .project-section img:hover {
@@ -396,6 +397,7 @@
     cursor: pointer;
 
 }
+
 
 
 
