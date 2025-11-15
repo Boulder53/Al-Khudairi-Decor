@@ -1,4 +1,4 @@
-   @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap');
 
     body {
       margin: 0;
@@ -64,6 +64,13 @@
     .services {
       padding: 60px 20px;
       text-align: center;
+      border-radius: 0px 0px 30px 30px;
+      /* === تم إضافة كود الخلفية المرنة هنا === */
+      background-image: url('./images/WhatsApp Image 2025-11-15 at 11.14.13 PM.jpeg'); /* **ضع رابط صورتك هنا بين علامتي التنصيص** */
+      background-size: cover; /* يجعل الصورة مرنة وتغطي المساحة بالكامل */
+      background-position: center center; /* توسيط الصورة */
+      background-repeat: no-repeat; /* منع تكرار الصورة */
+      /* ================================== */
     }
 
     .services h2 {
@@ -119,7 +126,7 @@
     }
 
     .project-section img {
-      width: 280px;
+      width: 300px;
       height: 220px;
       object-fit: cover;
       border-radius: 10px;
@@ -129,7 +136,7 @@
       opacity: 0;
       transform: translateY(30px);
       animation: fadeIn 1s forwards;
-       
+      
     }
 
     .project-section img:hover {
@@ -230,7 +237,7 @@
 
     }
 
-     .line1 i {
+    .line1 i {
      font-size: 1.8rem;
       height: 30px;
     margin-bottom: 100px;
@@ -395,7 +402,6 @@
     top: 10px;
     right: 20px;
     cursor: pointer;
-
 }
 
 
