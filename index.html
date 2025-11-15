@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ديكور الخضيري - خبرة في أعمال الدهانات والديكورات الفاخر بإشراف المهندس محمد الخضيري">
-  <title>ديكورات الخضيري</title>
+  <meta name="description" content="ديكور الخضيري - خبرة في أعمال الدهانات والديكور الفاخر بإشراف المهندس محمد الخضيري">
+  <title>ديكور الخضيري</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
 <script>
 function openVideo(id){
   const popup = document.getElementById(id);
@@ -25,27 +26,27 @@ function closeVideo(id){
   video.currentTime = 0;
 }
 
-function openGallery() {
-    document.getElementById("gallery").style.display = "block";
+/* دوال المعرض المُعدلة لتفتح المعرض المحدد بواسطة ID */
+function openGallery(galleryId) {
+    document.getElementById(galleryId).style.display = "block";
 }
 
-function closeGallery() {
-    document.getElementById("gallery").style.display = "none";
+function closeGallery(galleryId) {
+    document.getElementById(galleryId).style.display = "none";
 }
 </script>
 </head>
 <body>
 
   <header>
-    <h1>ديكورات الخضيري</h1>
-    <p>بإشراف المهندس محمد الخضيري - خبرة في أعمال الدهانات والديكورات الفاخر</p>
+    <h1>ديكور الخضيري</h1>
+    <p>بإشراف المهندس محمد الخضيري - خبرة في أعمال الدهانات والديكور الفاخر</p>
   </header>
 
   <nav>
     <a href="#home">الرئيسية</a>
     <a href="#services">الخدمات</a>
-    <a href="#gallery">الأعمال</a>
-    <a href="#about">من نحن</a>
+    <a href="#project">الأعمال</a> <a href="#about">من نحن</a>
     <a href="#contact">تواصل معنا</a>
   </nav>
 
@@ -56,13 +57,13 @@ function closeGallery() {
   <section id="services" class="services">
     <h2>خدماتنا</h2>
     <div class="service-box" onclick="openVideo('v1')">
-      <img src="ph26.jpg" alt="دهانات">
+      <img src="./images/ph26.jpg" alt="دهانات">
       <h3> دهانات داخلية</h3>
       <p>تنفيذ أحدث الدهانات باستخدام أجود الخامات وأحدث التقنيات لضمان الفخامة والجودة.</p>
     </div>
 
     <div class="service-box" onclick="openVideo('v2')">
-      <img src="ph3.jpg" alt="خشب" >  
+      <img src="./images/ph3.jpg" alt="خشب" >  
           
         
       <h3>ديكورات خشبية</h3>
@@ -70,7 +71,7 @@ function closeGallery() {
     </div>
 
     <div class="service-box" onclick="openVideo('v3')">
-      <img src="ph28.jpg" alt="تشطيبات">
+      <img src="./images/ph28.jpg" alt="تشطيبات">
       <h3>تشطيبات كاملة</h3>
       <p>من التصميم إلى التنفيذ بأعلى معايير الجودة والفخامة.</p>
     </div>
@@ -80,7 +81,7 @@ function closeGallery() {
   <span class="close-btn" onclick="closeVideo('v1')">&times;</span>
   <div class="video-box">
     <video controls>
-      <source src="v9.MP4">
+      <source src="./videos/v9.MP4">
     </video>
   </div>
 </div>
@@ -89,7 +90,7 @@ function closeGallery() {
   <span class="close-btn" onclick="closeVideo('v2')">&times;</span>
   <div class="video-box">
     <video controls>
-      <source src="v18.MP4">
+      <source src="./videos/v18.MP4">
     </video>
   </div>
 </div>
@@ -98,79 +99,73 @@ function closeGallery() {
   <span class="close-btn" onclick="closeVideo('v3')">&times;</span>
   <div class="video-box">
     <video controls>
-      <source src="v23.MP4">
+      <source src="./videos/v23.MP4">
     </video>
   </div>
 </div>
 
   <section id="project" class="project-section">
     <h2>معرض الأعمال</h2>
-     <img src="ph2.jpg" class="cover" alt="معرض 1" onclick="openGallery('')">
-     <img src="ph1.jpg" class="cover" alt="معرض 2" onclick="openGallery('')">
-     <img src="ph9.jpg" class="cover" alt="معرض 3" onclick="openGallery('')">
-     <img src="ph10.jpg" class="cover" alt="معرض 4" onclick="openGallery('')">
+     <img src="./images/ph2.jpg" class="cover" alt="معرض 1" onclick="openGallery('gallery1')">
+     <img src="./images/ph1.jpg" class="cover" alt="معرض 2" onclick="openGallery('gallery2')">
+     <img src="./images/ph9.jpg" class="cover" alt="معرض 3" onclick="openGallery('gallery3')">
+     <img src="./images/ph10.jpg" class="cover" alt="معرض 4" onclick="openGallery('gallery4')">
 
-     <div id="gallery" class="gallery">
-        <span class="close" onclick="closeGallery('')">&times;</span>
-
+     <div id="gallery1" class="gallery">
+        <span class="close" onclick="closeGallery('gallery1')">&times;</span>
         <div class="content">
-          <img src="ph2.jpg" alt="معرض 1">
-          <img src="ph30.jpg" alt="معرض 1">
-          <img src="ph29.jpg" alt="معرض 1">
-          <img src="ph28.jpg" alt="معرض 1">
-          <img src="ph27.jpg" alt="معرض 1">
+          <img src="./images/ph2.jpg" alt="معرض 1">
+          <img src="./images/ph30.jpg" alt="معرض 1">
+          <img src="./images/ph29.jpg" alt="معرض 1">
+          <img src="./images/ph28.jpg" alt="معرض 1">
+          <img src="./images/ph27.jpg" alt="معرض 1">
           </div>
-        </div>
      </div> 
 
 
-     <div id="gallery" class="gallery">
-        <span class="close" onclick="closeGallery('')">&times;</span>
+     <div id="gallery2" class="gallery">
+        <span class="close" onclick="closeGallery('gallery2')">&times;</span>
 
         <div class="content">
-          <img src="ph1.jpg" alt="معرض 1">
-          <img src="ph26.jpg" alt="معرض 1">
-          <img src="ph25.jpg" alt="معرض 1">
-          <img src="ph24.jpg" alt="معرض 1">
-          <img src="ph423.jpg" alt="معرض 1">
+          <img src="./images/ph1.jpg" alt="معرض 1">
+          <img src="./images/ph26.jpg" alt="معرض 1">
+          <img src="./images/ph25.jpg" alt="معرض 1">
+          <img src="./images/ph24.jpg" alt="معرض 1">
+          <img src="./images/ph423.jpg" alt="معرض 1">
           </div>
-        </div>
      </div> 
 
 
-     <div id="gallery" class="gallery">
-        <span class="close" onclick="closeGallery('')">&times;</span>
+     <div id="gallery3" class="gallery">
+        <span class="close" onclick="closeGallery('gallery3')">&times;</span>
 
         <div class="content">
-          <img src="ph9.jpg" alt="معرض 1">
-          <img src="ph22.jpg" alt="معرض 1">
-          <img src="ph21.jpg" alt="معرض 1">
-          <img src="ph20.jpg" alt="معرض 1">
-          <img src="ph19.jpg" alt="معرض 1">
+          <img src="./images/ph9.jpg" alt="معرض 1">
+          <img src="./images/ph22.jpg" alt="معرض 1">
+          <img src="./images/ph21.jpg" alt="معرض 1">
+          <img src="./images/ph20.jpg" alt="معرض 1">
+          <img src="./images/ph19.jpg" alt="معرض 1">
           </div>
-        </div>
      </div> 
 
 
-     <div id="gallery" class="gallery">
-        <span class="close" onclick="closeGallery('')">&times;</span>
+     <div id="gallery4" class="gallery">
+        <span class="close" onclick="closeGallery('gallery4')">&times;</span>
 
         <div class="content">
-          <img src="ph10.jpg" alt="معرض 1">
-          <img src="ph18.jpg" alt="معرض 1">
-          <img src="ph17.jpg" alt="معرض 1">
-          <img src="ph16.jpg" alt="معرض 1">
-          <img src="ph15.jpg" alt="معرض 1">
+          <img src="./images/ph10.jpg" alt="معرض 1">
+          <img src="./images/ph18.jpg" alt="معرض 1">
+          <img src="./images/ph17.jpg" alt="معرض 1">
+          <img src="./images/ph16.jpg" alt="معرض 1">
+          <img src="./images/ph15.jpg" alt="معرض 1">
           </div>
-        </div>
      </div> 
   </section>
 
   <section id="about" class="about">
     <h2>من نحن</h2>
     <p>
-      نحن في <strong>ديكور الخضيري</strong> بقيادة المهندس <strong>محمد الخضيري</strong>
-        نقدم خبرة تمتد لأكثر من 10 سنوات في مجال الدهانات والديكورات .
+      نحن في <strong>ديكور الخضيري</strong> بقيادة المهندس <strong>محمد الخضيري</strong> نقدم خبرة تمتد لأكثر من 10 سنوات في مجال الدهانات والديكور الداخلي .
       نحرص على تنفيذ كل مشروع بدقة عالية ولمسة فنية تجمع بين الفخامة والجودة لتلبية ذوق كل عميل.
     </p>
   </section>
@@ -186,7 +181,7 @@ function closeGallery() {
       <h2>تابعنا علي وسائل التواصل الاجتماعي</h2>
     <div class="links">
            <div class="line1">
-               <a href="https://www.instagram.com/decor_55876302?igsh=bzJqbjFpYTRsZWN3&utm_source=qr" class="link-1">
+               <a href="https://www.instagram.com/azez_decor?igsh=MXV2bzh5ejRjY3lnNQ==" class="link-1">
                     <i class="fa-brands fa-instagram"></i>
                     
                 </a>
@@ -217,6 +212,4 @@ function closeGallery() {
   </footer>
 
 </body>
-
 </html>
-
