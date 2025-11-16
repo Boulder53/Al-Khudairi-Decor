@@ -159,7 +159,7 @@
     .project-item {
         position: relative; 
         display: inline-block;
-        width: 300px;
+        width: 250px;
         height: 220px;
         margin: 12px;
         border-radius: 10px;
@@ -481,6 +481,7 @@
     right: 20px;
     cursor: pointer;
 }
+
 
 
 
