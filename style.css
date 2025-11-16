@@ -61,17 +61,7 @@
       border-radius: 10px;
     }
 
-    .project-section {
-      padding: 60px 20px;
-      text-align: center;
-      
-      /* === تم إضافة كود الخلفية المرنة هنا === */
-      background-image: url('./images/WhatsApp Image 2025-11-16 at 1.49.34 AM.jpeg'); /* **ضع رابط صورتك هنا بين علامتي التنصيص** */
-      background-size: cover; /* يجعل الصورة مرنة وتغطي المساحة بالكامل */
-      background-position: center center; /* توسيط الصورة */
-      background-repeat: no-repeat; /* منع تكرار الصورة */
-      /* ================================== */
-    }
+
 
     .services h2 {
       color: #2f2e2c;
@@ -403,6 +393,7 @@
     right: 20px;
     cursor: pointer;
 }
+
 
 
 
