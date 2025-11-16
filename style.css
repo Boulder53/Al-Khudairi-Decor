@@ -61,6 +61,13 @@
       border-radius: 10px;
     }
 
+    .services {
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 0px 0px 30px 30px;
+   
+    }
+
 
 
     .services h2 {
@@ -393,6 +400,7 @@
     right: 20px;
     cursor: pointer;
 }
+
 
 
 
