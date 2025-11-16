@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap');
 
     body {
       margin: 0;
@@ -65,10 +65,13 @@
       padding: 60px 20px;
       text-align: center;
       border-radius: 0px 0px 30px 30px;
-   
+      /* === تم إضافة كود الخلفية المرنة هنا === */
+      /* background-image: url('./images/WhatsApp Image 2025-11-16 at 1.49.34 AM.jpeg'); **ضع رابط صورتك هنا بين علامتي التنصيص** */
+      /* background-size: cover; يجعل الصورة مرنة وتغطي المساحة بالكامل */
+      /* background-position: center center; توسيط الصورة */
+      /* background-repeat: no-repeat; منع تكرار الصورة */
+      /* ================================== */
     }
-
-
 
     .services h2 {
       color: #2f2e2c;
@@ -76,6 +79,8 @@
       font-size: 2em;
     }
 
+    /* ------------------------------------------------------------------ */
+    /* 🛠️ تعديل الـ CSS للخدمات: جعل الحاوية نسبية للسماح بوضع الـ overlay */
     .service-box {
       display: inline-block;
       width: 260px;
@@ -85,6 +90,8 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       overflow: hidden;
       transition: transform 0.3s;
+      cursor: pointer;
+      position: relative; /* مهم: ليكون الـ overlay مطلق بالنسبة له */
     }
 
     .service-box:hover {
@@ -95,7 +102,32 @@
       width: 100%;
       height: 180px;
       object-fit: cover;
+      display: block; /* لمنع المسافة الإضافية أسفل الصورة */
     }
+
+    /* كود الـ overlay الخاص بالخدمات */
+    .service-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 180px; /* نفس ارتفاع الصورة */
+        background-color: rgba(47, 46, 44, 0.75); /* خلفية داكنة شفافة */
+        color: #d4af37; /* لون ذهبي للنص */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; /* إخفاء النص بشكل افتراضي */
+        transition: opacity 0.3s ease;
+        text-align: center;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+
+    .service-box:hover .service-overlay {
+        opacity: 1; /* إظهار النص عند الوقوف بالماوس */
+    }
+    /* ------------------------------------------------------------------ */
 
     .service-box h3 {
       background-color: #d4af37;
@@ -121,25 +153,71 @@
       color: #2f2e2c;
       font-size: 2em;
     }
-
-    .project-section img {
-      width: 300px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin: 12px;
-      transition: transform 0.5s, box-shadow 0.5s;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeIn 1s forwards;
-      
+    
+    /* ------------------------------------------------------------------ */
+    /* كود صور المعرض (باقي كما هو من التعديل السابق) */
+    .project-item {
+        position: relative; 
+        display: inline-block;
+        width: 300px;
+        height: 220px;
+        margin: 12px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeIn 1s forwards;
+        cursor: pointer; 
     }
 
-    .project-section img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    .project-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+        border-radius: 10px;
+        box-shadow: none;
+        margin: 0;
+        opacity: 1; 
+        transform: none; 
+        animation: none;
+        display: block;
     }
+
+    .project-item:hover img {
+        transform: scale(1.05);
+    }
+    
+    .project-item:hover {
+        box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    /* الـ Overlay والنص الذي يظهر عند الوقوف على صورة المعرض */
+    .project-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.65); 
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; 
+        transition: opacity 0.3s ease;
+        text-align: center;
+        padding: 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+        line-height: 1.4;
+    }
+
+    .project-item:hover .project-overlay {
+        opacity: 1; 
+    }
+    /* ------------------------------------------------------------------ */
 
     @keyframes fadeIn {
       to {
@@ -380,6 +458,8 @@
     z-index: 9999;
 }
 
+
+
 .gallery .content {
     margin-top: 60px;
 }
@@ -387,6 +467,7 @@
 .gallery img
  {
     width: 250px;
+    height: 250px;
     margin: 10px;
     border-radius: 10px;
 }
@@ -400,6 +481,7 @@
     right: 20px;
     cursor: pointer;
 }
+
 
 
 
