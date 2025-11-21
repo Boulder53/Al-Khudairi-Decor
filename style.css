@@ -15,6 +15,36 @@
       padding: 40px 20px;
     }
 
+   .cta-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #d4af37, #f7e27f);
+    color: #000;
+    font-weight: 800;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(212, 175, 55, 0.45);
+    transition: 0.25s ease;
+}
+
+.cta-gold:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(212, 175, 55, 0.6);
+    filter: brightness(1.08);
+}
+
+.cta-gold:active {
+    transform: translateY(0px);
+}
+
+.cta-gold .icon {
+    width: 22px;
+    height: 22px;
+}
+
     header img {
       width: 250px;
       height: 250px;
@@ -563,6 +593,7 @@
   cursor: default;
   flex-wrap: wrap;
 }
+
 
 
 
