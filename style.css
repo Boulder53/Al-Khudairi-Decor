@@ -15,6 +15,20 @@
       padding: 40px 20px;
     }
 
+    header img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      flex-wrap: wrap;
+      overflow: hidden;
+      transition: transform 1.6s ease;
+    }
+
+    header img:hover {
+      
+      transform: rotatey(360deg);
+    }
+
     header h1 {
       font-size: 2.8em;
       margin-bottom: 10px;
@@ -65,12 +79,6 @@
       padding: 60px 20px;
       text-align: center;
       border-radius: 0px 0px 30px 30px;
-      /* === تم إضافة كود الخلفية المرنة هنا === */
-      /* background-image: url('./images/WhatsApp Image 2025-11-16 at 1.49.34 AM.jpeg'); **ضع رابط صورتك هنا بين علامتي التنصيص** */
-      /* background-size: cover; يجعل الصورة مرنة وتغطي المساحة بالكامل */
-      /* background-position: center center; توسيط الصورة */
-      /* background-repeat: no-repeat; منع تكرار الصورة */
-      /* ================================== */
     }
 
     .services h2 {
@@ -139,6 +147,7 @@
     .service-box p {
       padding: 10px;
       color: #555;
+      text-wrap: wrap;
     }
 
     /* معرض الأعمال */
@@ -228,16 +237,32 @@
       }
     }
 
+
+
+    .work-locations table {
+      border: 4px outset #4069e6;
+      width: 100%;
+      border: 4;
+      font-size: 1.4rem ;
+    }
+
+    .work-locations table th {
+      background-color: #555;
+    }
+
     /* من نحن */
     .about {
       padding: 60px 20px;
       text-align: center;
       background-color: white;
+      
     }
 
     .about h2 {
       color: #2f2e2c;
       font-size: 2em;
+      
+      
     }
 
     .about p {
@@ -253,6 +278,7 @@
       color: #f5f2ed;
       padding: 60px 20px;
       text-align: center;
+      
     }
 
     .contact h2 {
@@ -279,18 +305,20 @@
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      background-color: #2f2e2c;
+      background-color: rgb(41, 34, 48);
       width: 100%;
-      height:225px;
+      height:250px;
       flex-wrap: wrap;
+      background: url("ttps://i.gifer.com/7sc.gif")center no-repeat fixed;
     }
 
     .media h2 {
       width: 100%;
       text-align: center;
-      margin-bottom: 100px  ;
-      color:#d4af37 ;
-      
+      color: #ce4910;
+      text-wrap: wrap;
+     
+      border-radius: 50%;
     }
 
 
@@ -300,54 +328,44 @@
       display: flex;
       text-align: left;
     }
+
+
     .links a {
       color: white;
-      margin-bottom: 100px;
+      
       margin: 0 15px;
       text-decoration: none;
       justify-content: space-around;
     }
 
-    .links a:hover {
-      color: #d4af37;
-      cursor: pointer;
 
-    }
-
-    .line1 i {
-     font-size: 1.8rem;
-      height: 30px;
-    margin-bottom: 100px;
-    color: #405DE6;
-    }
-
-    .line2 i {
-     font-size: 1.8rem;
-      height: 30px;
-      
-      color: #128C7E;
-      margin-bottom: 100px;
-    }
- .line3 i{
-     font-size: 1.8rem;
-      height: 30px;
-     
-      margin-bottom: 100px;
-      color: #1877f2;
- }
-
-  .line4 i {
+.line1 i {
       font-size: 1.8rem;
+      height: 30px;
+      color: #4069e6;
+    }
+
+.line2 i {
+      font-size: 1.8rem;
+      height: 30px;
+      color: #128C7E;
+    }
+.line3 i {
+      font-size: 1.8rem;
+      height: 30px;
+      color: #1877f2;
+}
+
+.line4 i {
+        font-size: 1.8rem;
         height: 30px;
-        margin-bottom: 100px;
-        color: #000000;
-        
-  }
+        color: #000000;   
+}
 
   .line1 i:hover {
     transform: scale(1.2);
     transition: transform 0.3s;
-     color: #5068e2;
+     color: #b13665;
   }
 
   .line2 i:hover {
@@ -486,9 +504,65 @@
 
 
 
+#serviceMap {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.areas-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.areas-list div {
+  background: #0078ff;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: default;
+  flex-wrap: wrap;
+}
 
 
 
+.works {
+  width: 100%;
+  height:200px;
+}
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+  width: 100%;
+  height: auto;
+}
+
+.works h2 {
+  text-align: center;
+  color: #000000;
+  text-wrap: wrap;
+  margin-top: 75px;
+}
+
+.work-list div {
+  background: #0078ff;
+  color: #dccece;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: default;
+  flex-wrap: wrap;
+}
 
 
 
