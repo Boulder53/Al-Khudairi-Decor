@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ديكورات الخضيري - خبرة في أعمال الدهانات والديكورات الفاخر بإشراف المهندس محمد الخضيري">
-  <title>ديكورات الخضيري</title>
+  <meta name="description" content="ديكور الخضيري - خبرة في أعمال الدهانات والديكور الفاخر بإشراف المهندس محمد الخضيري">
+  <title>ديكور الخضيري</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-<script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+ 
+<script >
+   
 function openVideo(id){
   const popup = document.getElementById(id);
   const video = popup.querySelector("video");
@@ -34,11 +37,14 @@ function openGallery(galleryId) {
 function closeGallery(galleryId) {
     document.getElementById(galleryId).style.display = "none";
 }
+
+  
 </script>
 </head>
 <body>
 
   <header>
+    <img src="WhatsApp Image 2025-11-20 at 3.16.27 PM.jpeg" alt="">
     <h1>ديكورات الخضيري</h1>
     <p>بإشراف المهندس محمد الخضيري - خبرة في أعمال الدهانات والديكورات الفاخر</p>
   </header>
@@ -46,7 +52,11 @@ function closeGallery(galleryId) {
   <nav>
     <a href="#home">الرئيسية</a>
     <a href="#services">الخدمات</a>
-    <a href="#project">الأعمال</a> <a href="#about">من نحن</a>
+    <a href="#project">الأعمال</a>
+    <a href="#area">محيط العمل</a>
+    <a href="#work">مجال عملنا</a>
+    <a href="#about">من نحن</a>
+    <a href="#media">حساباتنا</a>
     <a href="#contact">تواصل معنا</a>
   </nav>
 
@@ -141,10 +151,13 @@ function closeGallery(galleryId) {
         <span class="close" onclick="closeGallery('gallery1')">&times;</span>
         <div class="content">
           <img src="ph2.jpg" alt="معرض 1">
-          <img src="ph30.jpg" alt="معرض 1">
-          <img src="ph29.jpg" alt="معرض 1">
+          <img src="ph3.jpg" alt="معرض 1">
+          <img src="ph4.jpg" alt="معرض 1">
           <img src="ph28.jpg" alt="معرض 1">
           <img src="ph27.jpg" alt="معرض 1">
+          <img src="ph13.jpg" alt="معرض 1">
+          <img src="ph14.jpg" alt="معرض 1">
+          <img src="ph34.jpeg" alt="معرض 1">
           </div>
      </div> 
 
@@ -156,8 +169,11 @@ function closeGallery(galleryId) {
           <img src="ph1.jpg" alt="معرض 1">
           <img src="ph26.jpg" alt="معرض 1">
           <img src="ph25.jpg" alt="معرض 1">
-          <img src="ph24.jpg" alt="معرض 1">
+          <img src="ph5.jpg" alt="معرض 1">
           <img src="ph23.jpg" alt="معرض 1">
+          <img src="ph8.jpg" alt="معرض 1">
+          <img src="ph32.jpeg" alt="معرض 1">
+          <img src="ph33.jpeg" alt="معرض 1">
           </div>
      </div> 
 
@@ -171,6 +187,9 @@ function closeGallery(galleryId) {
           <img src="ph21.jpg" alt="معرض 1">
           <img src="ph20.jpg" alt="معرض 1">
           <img src="ph19.jpg" alt="معرض 1">
+          <img src="ph7.jpg" alt="معرض 1">
+          <img src="ph30.jpeg" alt="معرض 1">
+          <img src="ph31.jpeg" alt="معرض 1">
           </div>
      </div> 
 
@@ -184,30 +203,91 @@ function closeGallery(galleryId) {
           <img src="ph17.jpg" alt="معرض 1">
           <img src="ph16.jpg" alt="معرض 1">
           <img src="ph15.jpg" alt="معرض 1">
+          <img src="ph6.jpg" alt="معرض 1">
+          <img src="ph24.jpeg" alt="معرض 1">
+          <img src="ph29.jpeg" alt="معرض 1">
           </div>
      </div> 
   </section>
 
+
+
+
+<section id="area" class="service-areas">
+  <h2>المناطق التي يغطيها المهندس</h2>
+
+  <!-- الخريطة -->
+  <div id="serviceMap"></div>
+
+  <!-- قائمة المناطق (اختياري) -->
+  <div class="areas-list">
+    <div>مدينة-الكويت</div>
+    <div>الشويخ</div>
+    <div>الدسمة</div>
+    <div>شرق</div>
+    <div>بنيد-القار</div>
+    <div>اليرموك</div>
+    <div>كيفان</div>
+    <div>الاحمدي</div>
+    <div>فهد-الاحمد</div>
+    <div>الظهر</div>
+    <div>الصباحية</div>
+    <div>الفحيحيل</div>
+    <div>المنقف</div>
+    <div>ابوحليفه</div>
+    <div>هدية</div>
+    <div>مبارك-الكبير</div>
+    <div>ابوالحصانية</div>
+    <div>القرين</div>
+    <div>القصور</div>
+    <div>الفنيطيس</div>
+    <div>المسيلة</div>
+    <div>الفراونية</div>
+    <div>جليب-الشيوخ</div>
+    <div>الرقعي</div>
+    <div>الاندلس</div>
+    <div>العمرية</div>
+    <div>اشبيلية</div>
+    <div>الجهراء</div>
+    <div>النعيم</div>
+    <div>القصر</div>
+    <div>تيماء</div>
+    <div>العيون</div>
+    <div>الواحة</div>
+  </div>
+</section>
+
+
+<section id="work" class="works">
+  <h2>مجال عملنا</h2>
+  <div class="work-list">
+      <div>#ديكورات_داخلية</div>
+      <div>#ديكور_بيوت</div>
+      <div>#تصميم_داخلي</div>
+      <div>#ترميم_منازل</div>
+      <div>#اصباغ_بيوت</div>
+      <div>#افكار_ديكور</div>
+      <div>#تشطيب_منازل</div>
+  </div>
+</section>
+  
+
+
   <section id="about" class="about">
     <h2>من نحن</h2>
     <p>
-      نحن في <strong>ديكور الخضيري</strong> بقيادة المهندس <strong>محمد الخضيري</strong> نقدم خبرة تمتد لأكثر من 10 سنوات في مجال الدهانات والديكور الداخلي .
+      نحن في <strong>ديكور الخضيري</strong> بقيادة المهندس <strong>محمد الخضيري</strong> نقدم خبرة تمتد لأكثر من 10 سنوات في مجال الدهانات والديكورات الداخلي .
       نحرص على تنفيذ كل مشروع بدقة عالية ولمسة فنية تجمع بين الفخامة والجودة لتلبية ذوق كل عميل.
     </p>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>تواصل معنا</h2>
-    <p>📞 +96555876302</p>
-    <p>📱 واتساب:   +96555876302 </p>
-    <p>📧 البريد: decor.alkhodeiry@example.com</p>
-  </section>
   
-  <section class="media">
-      <h2>تابعنا علي وسائل التواصل الاجتماعي</h2>
+  <section id="media" class="media">
+        <h2>لرؤية المزيد تابعنا علي وسائل التواصل الاجتماعي</h2>
     <div class="links">
+    
            <div class="line1">
-               <a href="https://www.instagram.com/decor_55876302?igsh=bzJqbjFpYTRsZWN3&utm_source=qr" class="link-1">
+               <a href="https://www.instagram.com/azez_decor?igsh=MXV2bzh5ejRjY3lnNQ==" class="link-1">
                     <i class="fa-brands fa-instagram"></i>
                     
                 </a>
@@ -231,14 +311,93 @@ function closeGallery(galleryId) {
                 </a>
               </div>
          </div>
+
+
+
+
+
     </section>
+      <section id="contact" class="contact">
+    <h2>تواصل معنا</h2>
+    <p>📞 +96555876302</p>
+    <p>📱 واتساب:   +96555876302 </p>
+    
+  </section>
 
   <footer>
     جميع الحقوق محفوظة © 2025 ديكور الخضيري
   </footer>
 
+
+
+
+  <script>
+  // إنشاء الخريطة
+  var map = L.map('serviceMap').setView([30.0444, 31.2357], 6); // مركز افتراضي
+
+  // خريطة أساسية OpenStreetMap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  // المناطق مع الماركر
+  var areas = [
+    { name: "مدينة-الكويت", coords: [29.3780268,47.9751178], link: "https://maps.google.com/?cid=14117569827149822222&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "الشويخ", coords: [29.3235202,47.9358771], link: "https://maps.google.com/?cid=4864015776083074150&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "الدسمة", coords: [29.3664336,48.000698], link: "https://maps.google.com/?cid=15107871374692178489&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "شرق", coords: [29.3805187,47.9831014], link: "https://maps.google.com/?cid=14834876521077252181&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "بنيد-القار", coords: [29.3748727,48.0042721], link: "https://maps.google.com/?cid=9363217720507237047&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+
+
+    { name: "اليرموك", coords: [29.3128217,47.9688359], link: "https://maps.google.com/?cid=7149812516625295991&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "كيفان", coords: [29.3388594,47.961822], link: "https://maps.google.com/?cid=10463578776227438853&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "الاحمدي", coords: [29.083461,48.0734762], link: "https://maps.google.com/?cid=3016047818096422186&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "فهد-الاحمد", coords: [29.1314682,48.1060525], link: "https://maps.google.com/?cid=12979597138838990819&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "الظهر", coords: [29.1650224,48.0679507], link: "https://maps.google.com/?cid=4007009796255853658&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+
+
+    { name: "الصباحية", coords: [29.1081386,48.1059154], link: "https://maps.google.com/?cid=11036377444042915532&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "الفحيحيل", coords: [29.0830312,48.133226], link: "https://maps.google.com/?cid=5454579591747248901&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "المنقف", coords: [29.1073197,48.1239672], link: "https://maps.google.com/?cid=3776583424695791119&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "ابوحليفة", coords: [29.1281522,48.1259111], link: "https://maps.google.com/?cid=17908277811836447586&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "هدية", coords: [29.1458815,48.092758], link: "https://maps.google.com/?cid=18121771039298828203&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+
+
+    { name: "مبارك-الكبير", coords: [29.1875,48.084722], link: "https://maps.google.com/?cid=4460664499239147624&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "ابوالحصانية", coords: [29.1909059,48.1138531], link: "https://maps.google.com/?cid=16283583895332023517&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "القرين", coords: [29.196667,48.070556], link: "https://maps.google.com/?cid=12413034923377536196&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "القصور", coords: [29.2146014,48.0729113], link: "https://maps.google.com/?cid=8454795763601492300&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "الفنيطيس", coords: [29.2207571,48.0952394], link: "https://maps.google.com/?cid=4895417069919875828&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+
+
+    { name: "المسيلة", coords: [29.2495718,48.0940508], link: "https://maps.google.com/?cid=12504234411400261177&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "الفروانية", coords: [29.2815238,47.9605771], link: "https://maps.google.com/?cid=1639472626987821194&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "جليب-الشيوخ", coords: [29.2595663,47.9330522], link: "https://maps.google.com/?cid=5176324576459781430&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "الرقعي", coords: [29.3061333,47.9144007], link: "https://maps.google.com/?cid=11188553149420020015&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "الاندلس", coords: [29.3042048,47.8847321], link: "https://maps.google.com/?cid=11542494748745995043&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+
+
+    { name: "العمرية", coords: [29.2958138,47.9556801], link: "https://maps.google.com/?cid=11937449210462854668&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "اشبيلية", coords: [29.2737607,47.9390761], link: "https://maps.google.com/?cid=8446396963504470804&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "الجهراء", coords: [29.336821,47.6751716], link: "https://maps.google.com/?cid=5611056139978350635&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "النعيم", coords: [29.3334892,47.6935198], link: "https://maps.google.com/?cid=10953739364910824617&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "القصر", coords: [29.3419747,47.6959646], link: "https://maps.google.com/?cid=10761228833865219657&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+
+
+    { name: "تيماء", coords: [29.3288672,47.681595], link: "https://maps.google.com/?cid=5727441933133350980&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "العيون", coords: [29.3302817,47.6578212], link: "https://maps.google.com/?cid=13087379943299643601&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" },
+    { name: "الواحة", coords: [29.3445143,47.6578212], link: "https://maps.google.com/?cid=10041581188939250434&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" }
+  ];
+
+  areas.forEach(area => {
+    var marker = L.marker(area.coords).addTo(map);
+    marker.bindPopup(`<b>${area.name}</b><br><a href="${area.link}" target="_blank">رابط الموقع</a>`);
+  });
+</script>
+
 </body>
 </html>
+
 
 
 
