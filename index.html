@@ -67,6 +67,7 @@ function closeGallery(galleryId) {
     <a href="#about">من نحن</a>
     <a href="#media">حساباتنا</a>
     <a href="#contact">تواصل معنا</a>
+    <a href="after-befor.html">مشاريع قبل وبعد</a>
   </nav>
 
   <section id="home" class="hero">
@@ -123,6 +124,11 @@ function closeGallery(galleryId) {
     </video>
   </div>
 </div>
+
+  <a href="https://wa.me/96555876302" class="whatsapp-btn" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
 
   <section id="project" class="project-section">
     <h2>معرض الأعمال</h2>
@@ -440,10 +446,35 @@ document.getElementById("textToCopy").addEventListener("click", copyText);
   
 </script>
 
+<script>
+  let current = 0;
+const testimonials = document.querySelectorAll(".testimonial");
+const dots = document.querySelectorAll(".dot");
 
+function showTestimonial(index) {
+  testimonials.forEach(t => t.classList.remove("active"));
+  dots.forEach(d => d.classList.remove("active"));
+
+  testimonials[index].classList.add("active");
+  dots[index].classList.add("active");
+
+  current = index;
+}
+
+dots.forEach((dot, i) => {
+  dot.onclick = () => showTestimonial(i);
+});
+
+// Auto play
+setInterval(() => {
+  current = (current + 1) % testimonials.length;
+  showTestimonial(current);
+}, 4000);
+</script>
 
 </body>
 </html>
+
 
 
 
