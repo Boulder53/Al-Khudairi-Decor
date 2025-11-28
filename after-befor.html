@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مشاريع قبل وبعد</title>
+
+<style>
+
+body{
+    font-family: Tahoma, sans-serif;
+    margin:0;
+    background:#f5f5f5;
+    direction:rtl;
+}
+
+h1{
+    text-align:center;
+    padding:25px 0;
+    margin:0;
+    color:#333;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap:20px;
+    padding:20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.project-box{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 0 10px #0001;
+    transition:0.3s;
+}
+.project-box:hover{
+    transform:scale(1.02);
+}
+
+.project-imgs{
+    display:flex;
+    gap:10px;
+}
+
+.project-imgs img,
+.project-imgs video{
+    width:50%;
+    border-radius:8px;
+    cursor:pointer;
+    background:#000;
+    height:170px;
+    object-fit:cover;
+}
+
+.project-imgs img:hover{
+    opacity:0.8;
+}
+
+/* Popup IMAGE */
+#popupImgBox{
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:#0009;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+#popupImg{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+}
+
+#closeImg{
+    position:absolute;
+    top:20px;
+    right:20px;
+    background:white;
+    padding:8px 15px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+    box-shadow:0 0 10px #0003;
+}
+
+/* Popup VIDEO */
+#popupVideoBox{
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:#000d;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:2000;
+}
+
+#popupVideo{
+    width:90%;
+    max-width:900px;
+    max-height:90vh;
+    border-radius:10px;
+    background:#000;
+}
+
+#closeVideo{
+    position:absolute;
+    top:20px;
+    left:20px;
+    background:white;
+    padding:8px 15px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+    box-shadow:0 0 10px #0003;
+}
+
+</style>
+</head>
+<body>
+
+<h1>مشاريع قبل وبعد</h1>
+
+<div class="gallery">
+
+<!-- =============================== -->
+<!-- 5 مشاريع (قبل فيديو - بعد صورة) -->
+<!-- =============================== -->
+
+<!-- مشروع 1 -->
+<div class="project-box">
+    <div class="project-imgs">
+        <video src="4/VID-20251128-WA0001.mp4" onclick="openVideo(this.src)"></video>
+        <img src="4/IMG-20251128-WA0000.jpg" onclick="openImg(this.src)">
+    </div>
+</div>
+
+<div class="project-box">
+    <div class="project-imgs">
+        <video src="9/VID-20251128-WA0086.mp4" onclick="openVideo(this.src)"></video>
+        <img src="9/IMG-20251128-WA0085.jpg" onclick="openImg(this.src)">
+    </div>
+</div>
+
+<div class="project-box">
+    <div class="project-imgs">
+        <video src="11/VID-20251128-WA0024.mp4" onclick="openVideo(this.src)"></video>
+        <img src="11/motion_photo_6910545525657754342.jpg" onclick="openImg(this.src)">
+    </div>
+</div>
+
+<div class="project-box">
+    <div class="project-imgs">
+        <video src="13/VID-20251128-WA0030.mp4" onclick="openVideo(this.src)"></video>
+        <img src="13/motion_photo_1777015963595093299.jpg" onclick="openImg(this.src)">
+    </div>
+</div>
+
+<div class="project-box">
+    <div class="project-imgs">
+        <video src="15/VID-20251128-WA0083.mp4" onclick="openVideo(this.src)"></video>
+        <img src="15/motion_photo_8913262332010338944.jpg" onclick="openImg(this.src)">
+    </div>
+</div>
+
+<!-- =============================== -->
+<!-- 5 مشاريع (قبل صورة - بعد فيديو) -->
+<!-- =============================== -->
+
+<div class="project-box">
+    <div class="project-imgs">
+        <img src="5/IMG-20251128-WA0081.jpg" onclick="openImg(this.src)">
+        <video src="5/VID-20251128-WA0079.mp4" onclick="openVideo(this.src)"></video>
+    </div>
+</div>
+
+<div class="project-box">
+    <div class="project-imgs">
+        <img src="images/before7.jpg" onclick="openImg(this.src)">
+        <video src="videos/after7.mp4" onclick="openVideo(this.src)"></video>
+    </div>
+</div>
+
+<div class="project-box">
+    <div class="project-imgs">
+        <img src="images/before8.jpg" onclick="openImg(this.src)">
+        <video src="videos/after8.mp4" onclick="openVideo(this.src)"></video>
+    </div>
+</div>
+
+<div class="project-box">
+    <div class="project-imgs">
+        <img src="images/before9.jpg" onclick="openImg(this.src)">
+        <video src="videos/after9.mp4" onclick="openVideo(this.src)"></video>
+    </div>
+</div>
+
+<div class="project-box">
+    <div class="project-imgs">
+        <img src="images/before10.jpg" onclick="openImg(this.src)">
+        <video src="videos/after10.mp4" onclick="openVideo(this.src)"></video>
+    </div>
+</div>
+
+<!-- =============================== -->
+<!-- 5 مشاريع (قبل فيديو - بعد فيديو) -->
+<!-- =============================== -->
+
+<div class="project-box">
+    <div class="project-imgs">
+        <video src="2/VID-20251128-WA0056.mp4" onclick="openVideo(this.src)"></video>
+        <video src="2/VID-20251128-WA0055.mp4" onclick="openVideo(this.src)"></video>
+    </div>
+</div>
+
+<div class="project-box">
+    <div class="project-imgs">
+        <video src="7/VID-20251128-WA0011.mp4" onclick="openVideo(this.src)"></video>
+        <video src="7/VID-20251128-WA0012.mp4" onclick="openVideo(this.src)"></video>
+    </div>
+</div>
+
+<div class="project-box">
+    <div class="project-imgs">
+        <video src="10/VID-20251128-WA0013.mp4" onclick="openVideo(this.src)"></video>
+        <video src="10/VID-20251128-WA0014.mp4" onclick="openVideo(this.src)"></video>
+    </div>
+</div>
+
+<div class="project-box">
+    <div class="project-imgs">
+        <video src="12/VID-20251128-WA0022.mp4" onclick="openVideo(this.src)"></video>
+        <video src="12/VID-20251128-WA0023.mp4" onclick="openVideo(this.src)"></video>
+    </div>
+</div>
+
+<div class="project-box">
+    <div class="project-imgs">
+        <video src="14/VID-20251128-WA0027.mp4" onclick="openVideo(this.src)"></video>
+        <video src="14/VID-20251128-WA0029.mp4" onclick="openVideo(this.src)"></video>
+    </div>
+</div>
+
+<!-- =============================== -->
+<!-- 5 مشاريع (قبل صورة - بعد صورة) -->
+<!-- =============================== -->
+
+<div class="project-box">
+    <div class="project-imgs">
+        <img src="1/IMG-20251128-WA0052.jpg" onclick="openImg(this.src)">
+        <img src="1/motion_photo_2774781871664187308.jpg" onclick="openImg(this.src)">
+    </div>
+</div>
+
+<div class="project-box">
+    <div class="project-imgs">
+        <img src="6/motion_photo_2027294659284662844.jpg" onclick="openImg(this.src)">
+        <img src="6/IMG-20251128-WA0047.jpg" onclick="openImg(this.src)">
+    </div>
+</div>
+
+<div class="project-box">
+    <div class="project-imgs">
+        <img src="8/motion_photo_5568985954799707972.jpg" onclick="openImg(this.src)">
+        <img src="8/IMG-20251128-WA0044.jpg" onclick="openImg(this.src)">
+    </div>
+</div>
+
+<div class="project-box">
+    <div class="project-imgs">
+        <img src="images/before19.jpg" onclick="openImg(this.src)">
+        <img src="images/after19.jpg" onclick="openImg(this.src)">
+    </div>
+</div>
+
+<div class="project-box">
+    <div class="project-imgs">
+        <img src="images/before20.jpg" onclick="openImg(this.src)">
+        <img src="images/after20.jpg" onclick="openImg(this.src)">
+    </div>
+</div>
+
+</div> <!-- END gallery -->
+
+<!-- Popup IMAGE -->
+<div id="popupImgBox" onclick="closeImgPopup()">
+    <span id="closeImg">إغلاق</span>
+    <img id="popupImg">
+</div>
+
+<!-- Popup VIDEO -->
+<div id="popupVideoBox" onclick="closeVideoPopup()">
+    <span id="closeVideo">إغلاق</span>
+    <video id="popupVideo" controls></video>
+</div>
+
+<script>
+
+function openImg(src){
+    document.getElementById("popupImg").src = src;
+    document.getElementById("popupImgBox").style.display = "flex";
+}
+
+function closeImgPopup(){
+    document.getElementById("popupImgBox").style.display = "none";
+}
+
+function openVideo(src){
+    let v = document.getElementById("popupVideo");
+    v.src = src;
+    v.play();
+    document.getElementById("popupVideoBox").style.display = "flex";
+}
+
+function closeVideoPopup(){
+    let v = document.getElementById("popupVideo");
+    v.pause();
+    v.currentTime = 0;
+    document.getElementById("popupVideoBox").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
+ 
