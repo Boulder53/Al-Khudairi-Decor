@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
  
 <script >
    
@@ -65,7 +66,6 @@ function closeGallery(galleryId) {
     <a href="#area">محيط العمل</a>
     <a href="#work">مجال عملنا</a>
     <a href="#about">من نحن</a>
-    <a href="#media">حساباتنا</a>
     <a href="#contact">تواصل معنا</a>
     <a href="after-befor.html">مشاريع قبل وبعد</a>
   </nav>
@@ -124,11 +124,6 @@ function closeGallery(galleryId) {
     </video>
   </div>
 </div>
-
-  <a href="https://wa.me/96555876302" class="whatsapp-btn" target="_blank">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
-
 
   <section id="project" class="project-section">
     <h2>معرض الأعمال</h2>
@@ -310,35 +305,20 @@ function closeGallery(galleryId) {
   </section>
 
   
-  <section id="media" class="media">
-        <h2>لرؤية المزيد تابعنا علي وسائل التواصل الاجتماعي</h2>
-    <div class="links">
-    
-           <div class="line1">
-               <a href="https://www.instagram.com/decor_55876302?igsh=bzJqbjFpYTRsZWN3&utm_source=qr" class="link-1">
-                    <i class="fa-brands fa-instagram"></i>
-                    
-                </a>
-                </div>
-                 <div class="line2">
-                  <a href="https://wa.me/96555876302" class="link-2">
-                    <i class="fa-brands fa-whatsapp"></i>
-                   
-                </a>
-                </div>
-                <div class="line3">
-                  <a href="https://www.facebook.com/share/1CRYiKBYh6/" class="link-3">
-                    <i class="fa-brands fa-facebook"></i>
-                  
-                </a>
-              </div>
-                  <div class="line4">
-                  <a href="https://www.tiktok.com/@aboazez42?_r=1&_t=ZS-91N8DAuFJFQ" class="link-4">
-                    <i class="fa-brands fa-tiktok"></i>
-                    
-                </a>
-              </div>
-         </div>
+
+<div class="social-float">
+    <div class="main-btn" onclick="toggleSocial()">
+        <i class="fa-solid fa-share-nodes"></i>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://wa.me/96555876302" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/decor_55876302?igsh=bzJqbjFpYTRsZWN3&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1CRYiKBYh6/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.tiktok.com/@aboazez42?_r=1&_t=ZS-91N8DAuFJFQ" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+</div>
+
 
 
 
@@ -472,8 +452,16 @@ setInterval(() => {
 }, 4000);
 </script>
 
+  <script>
+function toggleSocial() {
+  document.querySelector(".social-float").classList.toggle("active");
+}
+</script>
+
+
 </body>
 </html>
+
 
 
 
